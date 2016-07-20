@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint AES128Helper.podspec' to ensure this is a
+#  Be sure to run `pod spec lint Alipay.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,24 +15,28 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "WeChat_SDK"
-  s.version      = "1.7.2"
-  s.summary      = "Tencent WeChat iOS SDK."
+  s.name         = "AliPay_SDK"
+  s.version      = "1.0.0"
+  s.summary      = "Ali Pay iOS SDK."
 
-  s.homepage     = "https://open.weixin.qq.com"
+  s.homepage     = "https://open.alipay.com"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   s.license      = "MIT"
 
-  s.author = { "Tencent" => "https://open.weixin.qq.com" }
+  s.author = { "Ali" => "https://open.alipay.com" }
 
   # s.platform     = :ios
   s.platform     = :ios, "6.0"
 
-  s.source       = { :http => "https://res.wx.qq.com/open/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK1.7.2.zip" }
-  s.source_files = "**/*.{h,m,a}"
-  # s.vendored_libraries = "**/libWeChatSDK.a"
-  s.libraries = "z", "sqlite3.0", "c++"
+  s.source       = { :http => "https://codeload.github.com/littleSun/AliPay/archive/master.zip" }
+
+  s.resources = "**/*.bundle"
+  s.vendored_frameworks = "**/*.framework"
+
+  s.frameworks = "SystemConfiguration"
+  s.libraries = "z","c++"
+
   s.requires_arc = true
 
 end
