@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AliPay_SDK"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "Ali Pay iOS SDK."
 
   s.homepage     = "https://open.alipay.com"
@@ -29,12 +29,12 @@ Pod::Spec.new do |s|
   # s.platform     = :ios
   s.platform     = :ios, "6.0"
 
-  s.source       = { :http => "https://codeload.github.com/littleSun/AliPay/archive/master.zip" }
+  s.source       = { :http => "https://github.com/littleSun/AliPay/archive/master.zip" }
 
   s.resources = "**/*.bundle"
   s.vendored_frameworks = "**/*.framework"
 
-  s.frameworks = "SystemConfiguration"
+  s.frameworks = "CoreMotion","SystemConfiguration","CoreTelephony"
   s.libraries = "z","c++"
 
   s.requires_arc = true
